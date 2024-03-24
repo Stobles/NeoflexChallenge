@@ -1,9 +1,11 @@
 import { Outlet } from "react-router-dom";
+import { Header } from "./Header";
 
 export const MainLayout = () => {
   return (
     <div className="h-full">
-      <main className="min-h-[100vh - 3rem]">
+      <Header />
+      <main className="min-h-[100vh - 4rem]">
         <Outlet />
       </main>
     </div>

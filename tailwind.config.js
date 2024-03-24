@@ -22,16 +22,22 @@ export default {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
-        "background-input": "hsl(var(--background-input))",
-        foreground: "hsl(var(--foreground))",
+        "background-cards": "hsl(var(--background-cards))",
+        "background-black": "hsl(var(--background-black))",
+        "background-orange": "hsl(var(--background-orange))",
+        "background-orange-second": "hsl(var(--background-orange-second))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
-          second: "hsl(var(--primary-second))",
+          orange: "hsl(var(--primary-orange))",
+          "orange-second": "hsl(var(--primary-orange-second))",
           foreground: "hsl(var(--primary-foreground))",
+        },
+        orange: {
+          DEFAULT: "hsl(var(--orange))",
+          second: "hsl(var(--orange-second))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
