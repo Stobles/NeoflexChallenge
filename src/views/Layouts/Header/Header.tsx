@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
-    <header className="flex items-center justify-between w-full min-h-16 px-2.5">
+    <header className="flex items-center justify-between w-full min-h-16 px-2.5 md:px-0">
       <Logo />
       <nav className="flex items-end gap-8 pr-2">
         <Link to="/favorites" className="relative">

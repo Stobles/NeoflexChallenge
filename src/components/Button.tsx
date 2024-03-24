@@ -13,10 +13,11 @@ const buttonVariants = cva(
           "bg-background-black font-semibold text-primary-foreground hover:bg-background-black/70",
         orange:
           "bg-background-orange font-semibold text-primary-foreground hover:bg-background-orange-second",
-        ghost: "text-primary font-semibold hover:bg-accent p-1",
+        link: "text-primary font-semibold",
+        ghost: "bg-accent/50 text-primary hover:bg-accent",
       },
       size: {
-        default: "w-fit h-10 px-4",
+        default: "w-fit h-10 px-2",
         full: "w-full h-10 py-3 px-2",
         icon: "h-8 w-8",
       },
