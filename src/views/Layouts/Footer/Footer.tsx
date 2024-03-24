@@ -27,30 +27,30 @@ export const Footer = () => {
       <div className="flex justify-end items-start flex-auto max-w-[310px]">
         <ul className="flex items-end gap-2">
           <li className="w-[30px] h-[20px]">
-            <Link to="https://vk.com/">
+            <Link target="_blank" to="https://vk.com/">
               <img
                 className="w-full h-full object-contain object-center"
-                src="/public/footer/vk.png"
+                src="/footer/vk.png"
                 alt="vk"
               />
             </Link>
           </li>
 
           <li className="w-[30px] h-[23px]">
-            <Link to="https://web.telegram.org/">
+            <Link target="_blank" to="https://web.telegram.org/">
               <img
                 className="w-full h-full object-contain object-center"
-                src="/public/footer/telegram.png"
+                src="/footer/telegram.png"
                 alt="telegram"
               />
             </Link>
           </li>
 
           <li className="w-[30px] h-[23px]">
-            <Link to="https://wa.me/75551234567">
+            <Link target="_blank" to="https://wa.me/75551234567">
               <img
                 className="w-full h-full object-contain object-center"
-                src="/public/footer/whatsapp.png"
+                src="/footer/whatsapp.png"
                 alt="whatsapp"
               />
             </Link>

@@ -5,7 +5,7 @@ export const Logo = () => {
     <Link to="/" className="block w-[85px] h-[30px]">
       <img
         className="w-full h-full object-contain object-center"
-        src="/public/logo.svg"
+        src="/logo.svg"
         alt="logo"
       />
     </Link>

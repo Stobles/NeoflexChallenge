@@ -4,11 +4,14 @@
 
 html,
 body,
-#root,
 :root {
   height: 100%;
 
   @apply font-montserrat;
+}
+
+#root {
+  height: 100%;
 }
 
 @layer base {

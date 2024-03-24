@@ -14,11 +14,11 @@ const generateQueryStr = (baseString: string, query: QueryParams): string => {
 export const productsApi = createApi({
   reducerPath: "productsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://fakestoreapi.com/products/electronics",
+    baseUrl: "https://fakestoreapi.com/products/category/electronics",
   }),
 
   endpoints: (builder) => ({
-    getUsers: builder.query<Product, QueryParams>({
+    getProducts: builder.query<Product[], QueryParams>({
       query: (queryParams: QueryParams) => {
         const queryStr = generateQueryStr("?", queryParams);
 
@@ -28,4 +28,4 @@ export const productsApi = createApi({
   }),
 });
 
-export const { useGetUsersQuery } = productsApi;
+export const { useGetProductsQuery } = productsApi;
