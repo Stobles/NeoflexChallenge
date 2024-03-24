@@ -3,7 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      roboto: ["Roboto", "sans-serif"],
+      montserrat: ["Montserrat", "sans-serif"],
     },
     container: {
       center: true,
@@ -22,16 +22,22 @@ export default {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
-        "background-input": "hsl(var(--background-input))",
-        foreground: "hsl(var(--foreground))",
+        "background-white": "hsl(var(--background-white))",
+        "background-black": "hsl(var(--background-black))",
+        "background-orange": "hsl(var(--background-orange))",
+        "background-orange-second": "hsl(var(--background-orange-second))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
-          second: "hsl(var(--primary-second))",
+          orange: "hsl(var(--primary-orange))",
+          "orange-second": "hsl(var(--primary-orange-second))",
           foreground: "hsl(var(--primary-foreground))",
+        },
+        orange: {
+          DEFAULT: "hsl(var(--orange))",
+          second: "hsl(var(--orange-second))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
