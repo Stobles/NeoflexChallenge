@@ -10,6 +10,10 @@ body,
   @apply font-montserrat;
 }
 
+#root {
+  height: 100%;
+}
+
 @layer base {
   :root {
     --background: 0 0% 92%;
