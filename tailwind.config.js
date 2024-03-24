@@ -3,7 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      roboto: ["Roboto", "sans-serif"],
+      montserrat: ["Montserrat", "sans-serif"],
     },
     container: {
       center: true,
@@ -22,7 +22,7 @@ export default {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
-        "background-cards": "hsl(var(--background-cards))",
+        "background-white": "hsl(var(--background-white))",
         "background-black": "hsl(var(--background-black))",
         "background-orange": "hsl(var(--background-orange))",
         "background-orange-second": "hsl(var(--background-orange-second))",

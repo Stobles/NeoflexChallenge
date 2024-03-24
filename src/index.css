@@ -8,13 +8,13 @@ body,
 :root {
   height: 100%;
 
-  @apply font-roboto;
+  @apply font-montserrat;
 }
 
 @layer base {
   :root {
     --background: 0 0% 92%;
-    --background-cards: 0 0% 100%;
+    --background-white: 0 0% 100%;
     --background-black: 0 0% 0%;
     --background-orange: 31 100% 63%;
     --background-orange-second: 37 100% 75%;
