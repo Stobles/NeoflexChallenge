@@ -25,6 +25,7 @@ export const ProductCard = ({ product }: ProductCardType) => {
 
   const onBuyClick = () => {
     if (isInCart) return toast.info("Товар уже в корзине.");
+    toast.success("Товар добавлен в корзину.");
     dispatch(addToCart(product));
   };
 
