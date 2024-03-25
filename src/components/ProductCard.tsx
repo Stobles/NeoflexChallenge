@@ -6,6 +6,8 @@ import { Product } from "@/features/types";
 import { HeartIcon, HeartOffIcon, StarIcon } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "sonner";
+import { Modal } from "./Modal";
+import { useState } from "react";
 
 type ProductCardType = {
   product: Product;
@@ -17,6 +19,8 @@ export const ProductCard = ({ product }: ProductCardType) => {
   );
   const { cart } = useSelector((state: RootState) => state.rootReducer.carts);
   const dispatch = useDispatch();
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const isFavorited = favorites.find((favorite) => product.id === favorite.id);
   const isInCart = cart.find(
@@ -43,10 +47,67 @@ export const ProductCard = ({ product }: ProductCardType) => {
       </div>
       <div className="flex flex-col gap-5 text-[17px]">
         <div className="flex justify-between items-center">
-          <h3 className=" font-bold max-w-[200px] line-clamp-2">
+          <h3
+            onClick={() => setIsModalOpen((prev) => !prev)}
+            className=" font-bold max-w-[200px] line-clamp-2 cursor-pointer"
+          >
             {product.title}
           </h3>
-          <div className="text-primary-orange font-bold text-end">2230 ₽</div>
+          {isModalOpen && (
+            <Modal
+              isVisible={isModalOpen}
+              toggleVisibility={() => setIsModalOpen((prev) => !prev)}
+              className="flex gap-6 w-full max-w-[800px] p-5"
+            >
+              <div className="w-[200px] h-[200px]">
+                <img
+                  className="w-full h-full object-contain object-center"
+                  src={product.image}
+                  alt={product.title}
+                />
+              </div>
+              <div className="space-y-3">
+                <h3 className="text-lg font-semibold">{product.title}</h3>
+                <span className="text-primary-orange font-bold">
+                  {product.price} $
+                </span>
+                <p className="text-sm max-w-[550px]">{product.description}</p>
+                <div className="w-full flex justify-between">
+                  <div className="flex items-center gap-2">
+                    <Button
+                      onClick={onBuyClick}
+                      className="text-[17px] font-bold"
+                      variant="ghost"
+                    >
+                      В корзину
+                    </Button>
+                    <Button
+                      onClick={onToggleFavoritesClick}
+                      size="icon"
+                      variant="orange"
+                    >
+                      {isFavorited ? (
+                        <HeartOffIcon size={22} />
+                      ) : (
+                        <HeartIcon size={22} />
+                      )}
+                    </Button>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <StarIcon
+                      fill="orange"
+                      className="text-primary-orange"
+                      size={24}
+                    />
+                    <span className="text-secondary font-semibold">
+                      {product.rating.rate}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Modal>
+          )}
+          <div className="text-primary-orange font-bold text-end">2230 $</div>
         </div>
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
