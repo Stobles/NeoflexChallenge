@@ -11,8 +11,6 @@ export const ProductsList = ({
 }) => {
   const productsCount = products?.length || 0;
 
-  console.log(isLoading);
-
   return (
     <div className="w-full h-full mt-2">
       <h2 className="text-lg font-semibold text-secondary">
