@@ -42,24 +42,14 @@ export const CartProductsSlice = createSlice({
       state.total = total;
     },
     removeFromCart(state, action: PayloadAction<Product>) {
-      const isExists = state.cart.find(
-        (cartProduct) => cartProduct.product.id === action.payload.id
-      );
-
-      if (isExists) {
-        state.cart = state.cart.map((cartProduct) => {
-          if (cartProduct.product.id === action.payload.id)
-            return (cartProduct = {
-              product: cartProduct.product,
-              quantity: cartProduct.quantity - 1,
-            });
-          return cartProduct;
-        });
-      } else {
-        state.cart = state.cart.filter(
-          (cartProduct) => cartProduct.product.id != action.payload.id
-        );
-      }
+      state.cart = state.cart.map((cartProduct) => {
+        if (cartProduct.product.id === action.payload.id)
+          return (cartProduct = {
+            product: cartProduct.product,
+            quantity: cartProduct.quantity - 1,
+          });
+        return cartProduct;
+      });
 
       const total = state.cart.reduce(
         (prev, cur) => prev + cur.product.price * cur.quantity,

@@ -7,6 +7,7 @@ import {
 import { CartProduct } from "@/features/types";
 import { MinusIcon, PlusIcon, TrashIcon } from "lucide-react";
 import { useDispatch } from "react-redux";
+import { toast } from "sonner";
 
 export const CartProductCard = ({
   cartProduct,
@@ -20,6 +21,9 @@ export const CartProductCard = ({
   };
 
   const onRemove = () => {
+    if (cartProduct.quantity === 1)
+      return toast.info("Количество товара не может быть меньше 1.");
+
     dispatch(removeFromCart(cartProduct.product));
   };
 
@@ -36,7 +40,7 @@ export const CartProductCard = ({
       >
         <TrashIcon className="text-destructive" size={24} />
       </Button>
-      <div className="flex items-center gap-4 text-[17px] mb-4">
+      <div className="flex items-center gap-4 text-[14px] md:text-[17px] mb-4">
         <div className="w-[145px] h-[135px]">
           <img
             src={cartProduct.product.image}
@@ -48,13 +52,13 @@ export const CartProductCard = ({
           <div className="font-semibold max-w-[400px] line-clamp-2">
             {cartProduct.product.title}
           </div>
-          <div className="font-semibold text-[15px] text-secondary">
+          <div className="font-semibold text-[.9em] text-secondary">
             {cartProduct.product.price} $
           </div>
         </div>
       </div>
       <div className="flex justify-between items-center">
-        <div className="flex items-center gap-4 ml-5">
+        <div className="flex items-center gap-4  md:ml-5">
           <Button
             onClick={onRemove}
             className="rounded-full"
