@@ -1,7 +1,7 @@
 import { cn } from "@/utils/cn";
-import { useClickAway, useLockBodyScroll } from "@uidotdev/usehooks";
-import { ReactNode } from "react";
+import { ReactNode, useRef } from "react";
 import { createPortal } from "react-dom";
+import { useOnClickOutside, useScrollLock } from "usehooks-ts";
 
 type ModalProps = {
   isVisible: boolean;
@@ -16,9 +16,10 @@ export const Modal = ({
   children,
   className,
 }: Readonly<ModalProps>): JSX.Element | null => {
-  const ref = useClickAway(toggleVisibility);
+  const ref = useRef(null);
+  useOnClickOutside(ref, toggleVisibility);
 
-  useLockBodyScroll();
+  useScrollLock();
 
   const modal: JSX.Element = (
     <>
