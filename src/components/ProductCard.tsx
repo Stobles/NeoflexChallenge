@@ -57,7 +57,7 @@ export const ProductCard = ({ product }: ProductCardType) => {
             <Modal
               isVisible={isModalOpen}
               toggleVisibility={() => setIsModalOpen((prev) => !prev)}
-              className="flex gap-6 w-full max-w-[800px] p-5"
+              className="flex flex-col items-center md:flex-row gap-6 w-full max-w-[800px] p-5"
             >
               <div className="w-[200px] h-[200px]">
                 <img
@@ -107,7 +107,9 @@ export const ProductCard = ({ product }: ProductCardType) => {
               </div>
             </Modal>
           )}
-          <div className="text-primary-orange font-bold text-end">2230 $</div>
+          <div className="text-primary-orange font-bold text-end">
+            {product.price} $
+          </div>
         </div>
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
