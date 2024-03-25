@@ -5,13 +5,13 @@
 html,
 body,
 :root {
-  height: 100%;
+  min-height: 100vh;
 
   @apply font-montserrat;
 }
 
 #root {
-  height: 100%;
+  min-height: 100vh;
 }
 
 @layer base {
@@ -27,7 +27,7 @@ body,
     --primary-orange-second: 37 100% 75%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 51%;
+    --secondary: 0 0% 67%;
 
     --destructive: 0 66% 63%;
 

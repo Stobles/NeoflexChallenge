@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-background-black font-semibold text-primary-foreground hover:bg-background-black/70",
+          "bg-background-black font-semibold text-primary-foreground rounded-3xl hover:bg-background-black/70",
         orange:
           "bg-background-orange font-semibold text-primary-foreground hover:bg-background-orange-second",
         link: "text-primary font-semibold",

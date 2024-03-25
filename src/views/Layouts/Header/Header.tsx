@@ -13,7 +13,7 @@ export const Header = () => {
   const favoritesCount = favorites.length;
   const cartCount = cart?.length;
   return (
-    <header className="flex items-center justify-between w-full min-h-16 px-2.5 md:px-0">
+    <header className="flex items-center justify-between w-full min-h-16 px-2.5">
       <Logo />
       <nav className="flex items-end gap-8 pr-2">
         <Link to="/favorites" className="relative">
