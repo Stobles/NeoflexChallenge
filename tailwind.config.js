@@ -3,7 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      montserrat: ["Montserrat", "sans-serif"],
+      montserrat: ["Montserrat", "monospace"],
     },
     container: {
       center: true,
@@ -18,6 +18,12 @@ export default {
       },
     },
     extend: {
+      gridTemplateColumns: {
+        cart: "minmax(400px, 700px) minmax(200px, 400px)",
+      },
+      gridTemplateRows: {
+        cart: "repeat(4, 120px)",
+      },
       colors: {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
