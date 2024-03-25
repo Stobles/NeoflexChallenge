@@ -35,9 +35,9 @@ export const ProductCard = ({ product }: ProductCardType) => {
 
   const onToggleFavoritesClick = () => {
     if (isFavorited) {
-      toast.success("Товар добавлен в понравившиеся.");
-    } else {
       toast.warning("Товар удален из понравившегося.");
+    } else {
+      toast.success("Товар добавлен в понравившиеся.");
     }
     dispatch(toggleFavorite(product));
   };
