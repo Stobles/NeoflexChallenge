@@ -18,6 +18,12 @@ export default {
       },
     },
     extend: {
+      gridTemplateColumns: {
+        cart: "minmax(400px, 700px) minmax(300px, 350px)",
+      },
+      gridTemplateRows: {
+        cart: "repeat(4, 120px)",
+      },
       colors: {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
